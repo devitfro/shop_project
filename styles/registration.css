@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+   font-family: "Roboto", sans-serif;
+   font-weight: 400;
+   padding: 0 80px 0 80px;
+   margin: 0 auto;
+   background: #e7e8e3;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+.register-container {
+   border: 3px solid #939878;
+   background: white;
+   padding: 2rem;
+   border-radius: 8px;
+   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+   width: 420px;
+}
+
+h2 {
+   text-align: center;
+   margin-bottom: 1.5rem;
+   color: #555;
+}
+
+label {
+   display: block;
+   margin-bottom: 0.5rem;
+   font-weight: bold;
+   color: #555;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+   width: 100%;
+   padding: 0.5rem;
+   margin-bottom: 1rem;
+   border: 1px solid #939878;
+   border-radius: 4px;
+   font-size: 1rem;
+   color: #555;
+}
+
+button {
+   width: 100%;
+   background: #939878;
+   color: white;
+   border-radius: 5px;
+   font-weight: 400;
+   font-size: 1rem;
+   padding: 8px 32px;
+   text-align: center;
+   line-height: 24px;
+   border: none;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+   margin-bottom: 1rem;
+}
+
+button:active {
+   transform: scale(0.95);
+}
+
+.message {
+   margin-top: 1.5rem;
+   text-align: center;
+   font-weight: bold;
+}
+
+.error {
+   color: #cf6f49;
+}
+
+.success {
+   color: #939878;
+}

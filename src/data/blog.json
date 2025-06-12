@@ -1,33 +1,36 @@
 [
    {
+      "id": "1",
       "image" : "src/images/blog01.png",
       "imageAltText" : "Photo blog 1",
       "buttonText" : "Trends",
       "date" : "May 10, 2022",
       "title" : "The 9 best homes in New York",
-      "text" : "Integer tincidunt rutrum faucibus. Proin sit amet varius arcu. Aliquam vel leo augue donec.",
+      "text" : "Integer tincidunt rutrum faucibus. Proin sit amet varius arcu. Aliquam vel leo augue donec.Integer tincidunt rutrum faucibus. Proin sit amet varius arcu. Aliquam vel leo augue donec.Integer tincidunt rutrum faucibus. Proin sit amet varius arcu. Aliquam vel leo augue donec",
       "link" : "#",
       "linkIcon" : "src/images/arrow_right.svg",
       "linkIconAltText" : "Arrow_right logo"
    },
    {
+      "id": "2",
       "image" : "src/images/blog02.png",
       "imageAltText" : "Photo blog 2",
       "buttonText" : "DIY",
       "date" : "May 10, 2022",
       "title" : "How to easily buy a house with Realco",
-      "text" : "Praesent nec felis nisl. Phasellus eget lacus a metus fringilla fermentum sit amet.",
+      "text" : "Praesent nec felis nisl. Phasellus eget lacus a metus fringilla fermentum sit amet. Praesent nec felis nisl. Phasellus eget lacus a metus fringilla fermentum sit amet.",
       "link" : "#",
       "linkIcon" : "src/images/arrow_right.svg",
       "linkIconAltText" : "Arrow_right logo"
    },
    {
+      "id": "3",
       "image" : "src/images/blog03.png",
       "imageAltText" : "Photo blog 3",
       "buttonText" : "DIY",
       "date" : "May 10, 2022",
       "title" : "Renting houses - complete guide",
-      "text" : "Nunc in bibendum leo, gravida scelerisque quam nulla interdum tellus a turpis.",
+      "text" : "Nunc in bibendum leo, gravida scelerisque quam nulla interdum tellus a turpis. Nunc in bibendum leo, gravida scelerisque quam nulla interdum tellus a turpis.",
       "link" : "#",
       "linkIcon" : "src/images/arrow_right.svg",
       "linkIconAltText" : "Arrow_right logo"

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registration form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/registration.css">
+</head>
+
+<body>
+  <div class="register-container">
+    <h2>Registration</h2>
+    <form id="registerForm" novalidate>
+      <label for="username">User name</label>
+      <input type="text" id="username" name="username" required minlength="3" />
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+      
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required minlength="6" />
+      
+      <label for="confirmPassword">Repeat password</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required minlength="6" />
+      
+      <button type="submit" id="submitBttn">OK</button>
+      <button type="button" id="backBttn">Back to shop</button>
+    </form>
+    <div class="message" id="formMessage"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById('registerForm');
+    const messageDiv = document.getElementById('formMessage');
+    
+    const backBttn = document.getElementById('backBttn');
+    backBttn.addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const username = form.username.value.trim();
+      const email = form.email.value.trim();
+      const password = form.password.value;
+      const confirmPassword = form.confirmPassword.value;
+
+      // Clear message
+      messageDiv.textContent = '';
+      messageDiv.className = 'message';
+
+      // Validation
+      if (username.length < 3) {
+        showMessage('Username must be at least 3 characters long', 'error');
+        return;
+      }
+
+      if (!validateEmail(email)) {
+        showMessage('Please enter a valid email', 'error');
+        return;
+      }
+
+      if (password.length < 6) {
+        showMessage('Password must be at least 6 characters long', 'error');
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        showMessage('The passwords do not match', 'error');
+        return;
+      }
+
+      showMessage('Registration was successful!', 'success');
+
+      // Cleaning the form
+      form.reset();
+    });
+
+    function showMessage(msg, type) {
+      messageDiv.textContent = msg;
+      messageDiv.classList.add(type);
+    }
+
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+  </script>
+</body>
+</html>

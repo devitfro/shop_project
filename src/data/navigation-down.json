@@ -1,0 +1,38 @@
+[
+  {
+    "class": "pages_list",
+    "links": [
+      "Pages",
+      "Home",
+      "About",
+      "Blog",
+      "Agents",
+      "Contact",
+      "FAQs",
+      "Properties"
+    ]
+  },
+  {
+    "class": "cms_pages_list",
+    "links": [
+      "CMS Pages",
+      "Property",
+      "Property Single",
+      "Blog Categories",
+      "Blog Single",
+      "Agent Single"
+    ]
+  },
+  {
+    "class": "utility_pages_list",
+    "links": [
+      "Utility Pages",
+      "Style Guide",
+      "Changelog",
+      "Licenses",
+      "404",
+      "Password",
+      "Search"
+    ]
+  }
+]

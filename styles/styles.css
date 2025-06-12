@@ -47,6 +47,12 @@ header {
   color: #2a2c1f !important;
   font-size: 16px;
 }
+
+.navbar-brand:active,
+.nav-link:active {
+ transform: scale(0.95);
+}
+
 .navbar-brand,
 .nav-item {
   padding-right: 32px;
@@ -73,7 +79,8 @@ header .nav-item-search {
 }
 .property_bttn,
 .registration_bttn,
-.explore_bttn {
+.explore_bttn,
+.sign_in_bttn {
   background: #cf6f49;
   color: white;
   font-weight: 400;
@@ -88,12 +95,12 @@ header .nav-item-search {
 
 .property_bttn:active,
 .registration_bttn:active,
-.explore_bttn:active {
+.explore_bttn:active,
+.sign_in_bttn:active {
   transform: scale(0.95);
 }
 
-
-.registration_bttn {
+.sign_in_bttn {
   background: #939878;
 }
 
@@ -477,6 +484,7 @@ header .nav-item-search {
   transition: transform 0.3s ease;
   transform-origin: center;
   box-shadow: 0 2px 8px #e7e8e3;
+  position: relative;
 }
 
 .card:hover {
@@ -735,7 +743,7 @@ header .nav-item-search {
 .reviews_cards_container {
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
   align-items: center;
   gap: 10px;
@@ -761,6 +769,7 @@ header .nav-item-search {
 
 .reviews_card img {
   margin-bottom: 26px;
+  display: block;
 }
 
 .reviews_card p {
@@ -768,6 +777,7 @@ header .nav-item-search {
   font-size: 18px;
   line-height: 27px;
   margin-bottom: 28px;
+  text-align: left;
 }
 
 .user {
@@ -790,6 +800,7 @@ header .nav-item-search {
   display: block;
   color: #65665c;
   font-size: 16px;
+  text-align: left;
 }
 .user_name_wrap span:first-child {
   color: #2a2c1f;
@@ -809,6 +820,7 @@ header .nav-item-search {
 .blog_descr_wrapper {
   position: relative;
   margin-bottom: 80px;
+
 }
 .blog_descr_wrapper p {
   margin-bottom: 0;
@@ -829,11 +841,14 @@ header .nav-item-search {
 .blog_descr_wrapper button:active {
   transform: scale(0.95);
 }
+
 .blogs_cards_container {
   display: flex;
   justify-content: space-between;
   align-self: center;
 }
+
+
 .blog_card {
   flex: 1 1 30%;
   min-width: 30%;
@@ -908,11 +923,13 @@ header .nav-item-search {
   padding: 64px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .nav_down_box {
-  width: 60%;
+  width: 10%;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .nav_down_box a,
@@ -949,13 +966,14 @@ header .nav-item-search {
   margin-bottom: 0;
 }
 .subscribe_form {
-  width: 30%;
+  width: 35%;
 }
 .subscribe_form span {
   display: inline-block;
   color: #2a2c1f;
   font-size: 16px;
   margin-bottom: 10px;
+  color:#6b7608;
 }
 .subscribe_form p:first-of-type {
   color: #65665c;
@@ -1556,3 +1574,115 @@ footer {
   text-align: center;
 }
 
+.add_to_cart {
+  padding: 8px;
+  border: none;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 8px;
+  border-radius: 8px;
+  background: none;
+  cursor: pointer; 
+}
+
+.add_to_cart:active {
+ transform: scale(0.95);
+}
+
+
+.pop_up_window {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #333;
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(20px);
+  z-index: 9999;
+}
+
+.pop_up_window.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.pop_up_window.hidden {
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.company_container {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #2a2c1f;
+}
+
+
+.blog_descr p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Показує тільки 2 рядки */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.blog_descr p.expanded {
+  -webkit-line-clamp: unset; /* Прибрати обмеження */
+}
+
+/* .blogs_cards_container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+} */
+
+.slider_wrapper {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.reviews_cards_container {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   gap: 20px;
+   overflow: hidden;
+   width: 100%;
+   justify-content: center;
+   transition: transform 0.3s ease;
+}
+
+.reviews_card {
+   flex: 0 0 80%; /* ширина картки */
+   max-width: 500px;
+   background: #fff;
+   padding: 20px;
+   border-radius: 12px;
+   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+   text-align: center;
+}
+
+.slider_btn {
+   background: none;
+   border: none;
+   font-size: 2rem;
+   cursor: pointer;
+   padding: 10px;
+   user-select: none;
+   transition: opacity 0.2s ease;
+}
+.slider_btn:disabled {
+   opacity: 0.3;
+   cursor: default;
+}

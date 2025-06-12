@@ -5,39 +5,15 @@ import { BlogCard } from './src/models/BlogCard.js';
 import { DescriptionCard } from './src/models/DescriprionCard.js';
 import { LogoCard } from './src/models/LogoCard.js';
 import { MediaCard } from './src/models/MediaCard.js';
+import { loadCards } from './src/utilities/load-cards.js';
+import { searchFlatByForm } from './src/utilities/search-flat-by-form.js';
+import { searchFlatByLocationCard } from './src/utilities/search-flat-by-location.js';
+import { loadFooterNavigationItem } from './src/utilities/footer-navigation-menu.js';
+import { showArrow} from './src/utilities/arrow.js';
+import { checkEmail } from './src/utilities/check-email.js';
+import { initReviewSlider } from './src/utilities/review-slider.js';
 
-// CLOSE ALERT 
-function closeAlert() {
-   let closeAlert = document.getElementById('alertWrapper');
-   closeAlert.classList.toggle('hidden')
-   closeAlert.classList.toggle('visible')
-}
-
-document.getElementById('closeAlertBttn').onclick = closeAlert;
-
-// LOAD CARDS FROM JSON
-function loadCards({url, containerSelector, cardClass }) {
-   const container = document.querySelector(containerSelector);
-
-   fetch(url)
-      .then(response => {
-         if(!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-         }
-         return response.json();
-      })
-      .then(data => {
-         data.forEach(item => {
-            const card = new cardClass(item).createCardElement();
-            container.appendChild(card);
-         })
-      })
-    
-      .catch(error => {
-         console.error(`Error loading data from ${url}:`, error);
-      });
-}
-
+// DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
    loadCards({
       url: 'src/data/data.json',
@@ -79,66 +55,22 @@ document.addEventListener("DOMContentLoaded", () => {
       url: 'src/data/media.json',
       containerSelector: '.icon_group',
       cardClass: MediaCard
-   })
-
-});
-
-
-// SEARCH FLAT BY INPUT FIELD
-const searchForm = document.getElementById("searchForm");
-const searchInput = document.getElementById("searchInput");
-const showAllbttn = document.getElementById("showAllHouseBttn");
-let flag = false;
-
-searchForm.addEventListener("submit", (e) => {
-   e.preventDefault();
-
-   const query = searchInput.value.toLowerCase().trim();
-   const cards = document.querySelectorAll(".card");
-
-   let firstMatch = null;
-
-   cards.forEach(card => {
-      const title = card.querySelector(".card-title").textContent.toLowerCase();
-      const location = card.querySelector("span").textContent.toLowerCase();
-
-      if (title.includes(query) || location.includes(query)) {
-         card.style.display = "block";
-         card.style.width = "45%";
-
-         if (!firstMatch) {
-            firstMatch = card;
-         }
-      } else {
-         card.style.display = "none";
-      }
    });
+      // Проверяем, есть ли флаг "первый запуск"
+  if (!localStorage.getItem('isFirstLoad')) {
+    localStorage.clear(); // очищаем localStorage только при первом запуске
+    localStorage.setItem('isFirstLoad', 'true'); // устанавливаем флаг, что первый запуск уже был
+  }
 
-// SCROLLING TO MATCHING CARDS
-   if (firstMatch) {
-      firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
-      flag = true;
-      showAllBttn();
-   } else {
-      alert("No results found.");
-   }
+   searchFlatByForm();
+   searchFlatByLocationCard();
+   //loadFooterNavigationItem('src/data/navigation-down.json', '.nav_down_box'); 
+   showArrow();
+   checkEmail();
+   initReviewSlider();
 });
 
-function showAllBttn() {
-   if (flag) {
-      showAllbttn.style.display = "block";
-   }
-}
-
-showAllbttn.addEventListener("click", () => {
-   const cards = document.querySelectorAll(".card");
-   cards.forEach(card => {
-      card.style.display = "block";
-      card.style.width = "30%";
-   })
-})
-
-// EVENT ON EXPLORE BUTTON
+// Event on explore button
 const exploreBttns = document.querySelectorAll(".explore_bttn");
 const cardsContainer = document.getElementById("cardsWrapper");
 
@@ -151,43 +83,7 @@ exploreBttns.forEach(bttn => {
    })
 })
 
-// SEARCH FLAT BY LOCATION CARD
-function searchByLocationCard() {
-   document.addEventListener("click", (e) => {
-      const locationCard = e.target.closest(".location_card");
-      if (!locationCard) return;
-
-      const location = locationCard.dataset.location.toLowerCase().trim();
-      const cards = document.querySelectorAll(".card");
-
-      let firstMatch = null;
-
-
-      cards.forEach(card => {
-         const cardLocation = card.dataset.location.toLowerCase().trim();
-
-         if (cardLocation.includes(location)) {
-            card.style.display = "block";
-            card.style.width = "45%";
-            if (!firstMatch) firstMatch = card;
-         } else {
-            card.style.display = "none";
-         }
-      });
-
-      if (firstMatch) {
-         firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
-         flag = true;
-         showAllBttn();
-      } else {
-         alert("No results found.");
-      }
-   });
-}
-
-searchByLocationCard();
-
-// CONTACT WITH AGENT
+// Contact with agent
 const agentBttns = document.querySelectorAll('.contact_agent_bttn');
 const contactForm = document.getElementById('contactForm');
 
@@ -197,52 +93,32 @@ agentBttns.forEach(bttn => {
    });
 });
 
-// CHECK EMAIL IN FORM
-document.getElementById('contactForm').addEventListener('submit', (e) => {
-   e.preventDefault(); // Отключаем перезагрузку
+// Close alert
+function closeAlert() {
+   let closeAlert = document.getElementById('alertWrapper');
+   closeAlert.classList.toggle('hidden')
+   closeAlert.classList.toggle('visible')
+}
 
-   const emailInput = document.getElementById('emailInput');
-   const email = emailInput.value.trim();
+document.getElementById('closeAlertBttn').onclick = closeAlert;
 
-   if (!validateEmail(email)) {
-      alert("Please enter a valid email address.");
-      return;
-   }
-
-   emailInput.value = '';
-   const message = document.querySelector('.subscribe_form p:last-of-type');
-   message.innerText = "Thank you! We will contact you soon.";
-   message.style.color = '#939878';
-   message.style.fontWeight = 'bold';
+// Registration button
+const bttn = document.getElementById('registrationBttn');
+bttn.addEventListener('click', () => {
+   window.location.href = 'registration.html';
 });
 
-function validateEmail(email) {
-   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-   return regex.test(email);
-}
+// Open cart
+const cartBttn = document.getElementById('cart');
+cartBttn.addEventListener('click', () => {
+   window.location.href = 'cart.html';
+})
 
-// ARROW
-function showArrow() {
-   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-   window.addEventListener("scroll", () => {
-   if (window.scrollY > 300) {
-      scrollToTopBtn.style.display = "block";
-   } else {
-      scrollToTopBtn.style.display = "none";
-   }
-   });
-
-   scrollToTopBtn.addEventListener("click", () => {
-   window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-   });
-   });
-}
-
-showArrow();
-
+// One more registration button ("Families are our priority")
+const registrationBttn = document.getElementById('registrationBttn2');
+registrationBttn.addEventListener('click', () => {
+   window.location.href = 'registration.html';
+})
 
 
 

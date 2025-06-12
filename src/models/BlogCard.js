@@ -1,6 +1,7 @@
 export class BlogCard {
-   constructor(data) {
+   constructor(data, index) {
       this.data = data;
+      this.index = index;
    }
 
    createCardElement() {
@@ -18,11 +19,20 @@ export class BlogCard {
             <h4>${this.data.title}</h4>
             <p>${this.data.text}</p>
             <div class="link_box">
-               <a href="${this.data.link}">Read more</a>
+               <a href="${this.data.link}" class="read-more">Read more</a>
                <img src="${this.data.linkIcon}" alt="${this.data.linkIconAltText}">
             </div>
-         </div>
+         </div>   
       `;
+
+      const paragraph = card.querySelector('p');
+      const readMoreLink = card.querySelector('.read-more');
+
+      readMoreLink.addEventListener('click', (e) => {
+         e.preventDefault();
+         paragraph.classList.toggle('expanded');
+         readMoreLink.textContent = paragraph.classList.contains('expanded') ? 'Show less' : 'Read more';
+      });
 
       return card;
    }

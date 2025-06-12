@@ -47,22 +47,24 @@
                         </ul>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">About</a>
+                        <a class="nav-link active" aria-current="page" href="#quickEasySection">About</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#companyContainer">Contact</a>
                      </li>
-                     <li class="nav-item nav-item-search">
+                     <!-- <li class="nav-item nav-item-search">
                         <img src="src/images/search.svg" alt="search image">
                         <a class="nav-link" href="#">Search</a>
-                     </li>
+                     </li> -->
                   </ul>
                </div>
-               <button class="bttn_card">
-                  <img src="src/images/shopping_bag.svg" alt="Shopping bag logo">
-                  Card
+               <button class="bttn_card" id="cart">
+                  <img src="src/images/shopping_bag.svg" alt="Shopping bag logo">            
+                  <span class="cart-count">0</span> Cart
                </button>
-               <button class="registration_bttn">Registration</button>
+
+               <button class="sign_in_bttn">Sign in</button>
+               <button class="registration_bttn" id="registrationBttn">Sign up</button>
             </div>
          </nav>
       </header>
@@ -120,7 +122,7 @@
          </div>
       </div>
 
-      <div class="quick_easy_container">
+      <div class="quick_easy_container" id="quickEasySection">
          <div class="quick_easy_img_container">
             <img src="src/images/quick_easy_flat.png" alt="Quick and easy flat image">
          </div>
@@ -198,7 +200,7 @@
                <h2>Families are our priority</h2>
                <p>Curabitur eget aliquam elit. In mauris purus, auctor a eleifend non, placerat vel arcu. In non
                   consectetur lorem. Morbi non varius sapien suscipit mauri.</p>
-               <button>Registration</button>
+               <button class="registration_bttn" id="registrationBttn2">Registration</button>
             </div>
          </div>
       </div>
@@ -207,6 +209,11 @@
          <h2>What customers say</h2>
          <p>Faucibus orci luctus et ultrices posuere cubilia curae.</p>
          <ul class="reviews_cards_container"></ul>
+
+         <div class="slider_controls">
+            <button class="slider_btn prev">←</button>
+            <button class="slider_btn next">→</button>
+         </div>
       </div>
 
       <div class="blog_container">
@@ -215,8 +222,8 @@
                <h3>Blog</h3>
                <h2>Latest posts</h2>
                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Praesent
-                  efficitur nibh massa morbi sagittis ornare dui in ornare.</p>
-               <button>View all</button>
+                  efficitur nibh massa morbi sagittis ornare dui in ornare.
+               </p>
             </div>
 
             <div class="blogs_cards_container"></div>
@@ -226,45 +233,35 @@
       <div class="navigation_down">
          <div class="nav_down_box">
             <a href="#"><img src="src/images/logo.svg" alt="Realco logo" class="header_logo"></a>
-            <ul class="pages_list">
-               <li><a href="#">Pages</a></li>
-               <li><a href="#">Home</a></li>
-               <li><a href="#">About</a></li>
-               <li><a href="#">Blog</a></li>
-               <li><a href="#">Agents</a></li>
-               <li><a href="#">Contact</a></li>
-               <li><a href="#">FAQs</a></li>
-               <li><a href="#">Properties</a></li>
-            </ul>
-            <ul class="cms_pages_list">
-               <li><a href="#">CMS Pages</a></li>
-               <li><a href="#">Property</a></li>
-               <li><a href="#">Property Single</a></li>
-               <li><a href="#">Blog Categories</a></li>
-               <li><a href="#">Blog Single</a></li>
-               <li><a href="#">Agent Single</a></li>
-            </ul>
-            <ul class="utility_pages_list">
-               <li><a href="#">Utility Pages</a></li>
-               <li><a href="#">Style Guide</a></li>
-               <li><a href="#">Changelog</a></li>
-               <li><a href="#">Licenses</a></li>
-               <li><a href="#">404</a></li>
-               <li><a href="#">Password</a></li>
-               <li><a href="#">Search</a></li>
-            </ul>
+         </div>
+         <div class="company_container" id="companyContainer">
+            <div class="company_contacts">
+               <h3>Contact Information</h3>
+               <p><strong>Address:</strong> 123 Main Street, Los Angeles</p>
+               <p><strong>Phone:</strong> +380 44 123 4567</p>
+               <p><strong>Email:</strong> info@realco.ua</p>
+               <p><strong>Working hours:</strong> Mon-Fri 9:00 - 18:00</p>
+            </div>
+
+            <div class="company_map" style="margin-top: 2rem;">
+               <h3>Our Location</h3>
+               <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.965152313283!2d-118.244!3d34.0522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1234567890"
+                  width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+               </iframe>
+            </div>
          </div>
 
          <div class="subscribe_form">
-            <span>To contact with us</span>
+            <span>To contact with our agent:</span>
             <p>You can leave your email and we will contact you immediately.</p>
             <form class="bttn_form_nav_container" id="contactForm">
                <input type="email" placeholder="Enter your email" id="emailInput" required>
-               <button>Contact</button>
+               <button type="submit">Contact</button>
             </form>
             <p>By subscribing you agree to with our Privacy Policy</p>
-   
          </div>
+
       </div>
 
       <footer>
@@ -273,9 +270,12 @@
             <ul class="icon_group"></ul>
          </div>     
       </footer>
+ 
    </div>
 
+   <div id="popUp" class="pop_up_window hidden"></div>
    <button id="scrollToTopBtn" title="Go to top">↑</button>
+
    </body>
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

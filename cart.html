@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="styles/cart.css">
+</head>
+<body>
+   <div class="container">
+      <div class="cart_container">
+         <h2>You cart:</h2>
+         <ul class="cart_list"></ul>
+      </div>
+
+      <div class="bttn_container">
+         <button type="button" id="continueBttn">Сontinue shopping</button>
+         <button type="button" id="bttn">Make a purchase</button>
+      </div>
+   </div>
+
+   <script type="module">
+      import { getCart } from './src/utilities/cart.js';
+
+      const cartContainer = document.querySelector('.cart_list');
+      const cart = getCart();
+      const items = Object.values(cart);
+      let count = 1;
+
+      if (items.length == 0) {
+         cartContainer.innerHTML = '<p class="empty">Кошик порожній.</p>';
+      } else {
+         items.forEach(item => {
+         const li = document.createElement('li');
+         li.classList.add('cart_item');
+         li.innerHTML = `
+            <span>${count}</span>
+            <h3>${item.title}</h3>
+            <p>${item.district}</p>
+            <p>${item.price}</p>
+         `;
+         cartContainer.appendChild(li);
+         count++;
+         });
+      }
+
+      const bttnContinue = document.getElementById('continueBttn');
+      bttnContinue.addEventListener('click', () => {
+         window.location.href = 'index.html';
+      });
+   </script>
+</body>
+</html>
