@@ -7,6 +7,7 @@ export class HouseCard {
       const card = document.createElement('div');
       card.classList.add('card');
       card.setAttribute('data-area', this.data.district);
+      card.setAttribute('data-location', this.data.location.toLowerCase());
 
       card.innerHTML = `
       <a href="#">
@@ -16,14 +17,14 @@ export class HouseCard {
           <span>${this.data.price}</span>
           <p>
             <a href="https://www.google.com/maps?q=${this.data.mapLink}" target="_blank" rel="noopener noreferrer">
-              <img src="img/point.svg" alt="point">
+              <img src="src/images/point.svg" alt="point">
               <span>${this.data.location}</span>
             </a>
           </p>
           <ul class="list_comfort">
-            <li class="list_item"><img src="img/bathtub.svg" alt="Bathtub logo">${this.data.features.bath}</li>
-            <li class="list_item"><img src="img/bed.svg" alt="Bed logo">${this.data.features.bed}</li>
-            <li class="list_item"><img src="img/square_foot.svg" alt="Square foot logo">${this.data.features.area}</li>
+            <li class="list_item"><img src="src/images/bathtub.svg" alt="Bathtub logo">${this.data.features.bath}</li>
+            <li class="list_item"><img src="src/images/bed.svg" alt="Bed logo">${this.data.features.bed}</li>
+            <li class="list_item"><img src="src/images/square_foot.svg" alt="Square foot logo">${this.data.features.area}</li>
           </ul>
         </div>
       </a>

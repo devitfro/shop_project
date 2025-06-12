@@ -3,7 +3,7 @@
     "title": "Cozy studio in Los Angeles",
     "district": "Los Angeles",
     "price": "$ 1,200.00 USD",
-    "image": "img/flat01.png",
+    "image": "src/images/flat01.png",
     "location": "2263 Southlea, Los Angeles",
     "mapLink": "https://www.google.com/maps/place/%D0%9B%D0%BE%D1%81-%D0%90%D0%BD%D0%B4%D0%B6%D0%B5%D0%BB%D0%B5%D1%81,+%D0%9A%D0%B0%D0%BB%D0%B8%D1%84%D0%BE%D1%80%D0%BD%D0%B8%D1%8F,+%D0%A1%D0%A8%D0%90/@34.0194735,-119.0355606,10z/data=!3m1!4b1!4m6!3m5!1s0x80c2c75ddc27da13:0xe22fdf6f254608f4!8m2!3d34.0549076!4d-118.242643!16s%2Fm%2F030qb3t?entry=ttu&g_ep=EgoyMDI1MDYwOC4wIKXMDSoASAFQAw%3D%3D",
     "features": {
@@ -16,7 +16,7 @@
     "title": "Tiny home in San Diego",
     "district": "San Diego",
     "price": "$ 740,000.00 USD",
-    "image": "img/flat02.png",
+    "image": "src/images/flat02.png",
     "location": "2569 El Segundo, San Diego",
     "mapLink": "https://www.google.com/maps/place/%D0%A1%D0%B0%D0%BD-%D0%94%D0%B8%D0%B5%D0%B3%D0%BE...",
     "features": {
@@ -29,7 +29,7 @@
     "title": "Crown house in New York",
     "district": "New York",
     "price": "$ 980,000.00 USD",
-    "image": "img/flat03.png",
+    "image": "src/images/flat03.png",
     "location": "4489 Smity Fielda, New York",
     "mapLink": "https://www.google.com/maps/place/%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA,+%D0%A1%D0%A8%D0%90/@40.6971934,-74.309145,10z/data=!3m1!4b1!4m6!3m5!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62!8m2!3d40.7127753!4d-74.0059728!16zL20vMDJfMjg2?entry=ttu&g_ep=EgoyMDI1MDYwOC4wIKXMDSoASAFQAw%3D%3D",
     "features": {
@@ -42,7 +42,7 @@
     "title": "Family house in Los Angeles",
     "district": "Los Angeles",
     "price": "$ 4,200.00 USD",
-    "image": "img/flat04.png",
+    "image": "src/images/flat04.png",
     "location": "2263 Southlea, Los Angeles",
     "mapLink": "https://www.google.com/maps/place/%D0%9B%D0%BE%D1%81-%D0%90%D0%BD%D0%B4%D0%B6%D0%B5%D0%BB%D0%B5%D1%81,+%D0%9A%D0%B0%D0%BB%D0%B8%D1%84%D0%BE%D1%80%D0%BD%D0%B8%D1%8F,+%D0%A1%D0%A8%D0%90/@34.0194735,-119.0355606,10z/data=!3m1!4b1!4m6!3m5!1s0x80c2c75ddc27da13:0xe22fdf6f254608f4!8m2!3d34.0549076!4d-118.242643!16s%2Fm%2F030qb3t?entry=ttu&g_ep=EgoyMDI1MDYwOC4wIKXMDSoASAFQAw%3D%3D",
     "features": {
@@ -55,7 +55,7 @@
     "title": "Studio in Las Vegas",
     "district": "Las Vegas",
     "price": "$ 820,000.00 USD",
-    "image": "img/flat05.png",
+    "image": "src/images/flat05.png",
     "location": "2569 Halls Corner, Las Vegas",
     "mapLink": "https://www.google.com/maps/place/%D0%9B%D0%B0%D1%81-%D0%92%D0%B5%D0%B3%D0%B0%D1%81,+%D0%9D%D0%B5%D0%B2%D0%B0%D0%B4%D0%B0,+%D0%A1%D0%A8%D0%90/@36.1251645,-115.339808,11z/data=!3m1!4b1!4m6!3m5!1s0x80beb782a4f57dd1:0x3accd5e6d5b379a3!8m2!3d36.171563!4d-115.1391009!16zL20vMGN2M3c?entry=ttu&g_ep=EgoyMDI1MDYwOC4wIKXMDSoASAFQAw%3D%3D",
     "features": {
@@ -68,7 +68,7 @@
     "title": "San Diego story",
     "district": "San Diego",
     "price": "$ 3,700.00 USD",
-    "image": "img/flat06.png",
+    "image": "src/images/flat06.png",
     "location": "569 El Segundo, San Diego",
     "mapLink": "https://www.google.com/maps/place/%D0%A1%D0%B0%D0%BD-%D0%94%D0%B8%D0%B5%D0%B3%D0%BE,+%D0%9A%D0%B0%D0%BB%D0%B8%D1%84%D0%BE%D1%80%D0%BD%D0%B8%D1%8F,+%D0%A1%D0%A8%D0%90/@32.8235182,-117.7315934,10z/data=!3m1!4b1!4m6!3m5!1s0x80d9530fad921e4b:0xd3a21fdfd15df79!8m2!3d32.715738!4d-117.1610838!16zL20vMDcxdnI?entry=ttu&g_ep=EgoyMDI1MDYwOC4wIKXMDSoASAFQAw%3D%3D",
     "features": {

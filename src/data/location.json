@@ -1,0 +1,32 @@
+[
+   {
+      "location": "San Francisco",
+      "state": ", CA",
+      "image": "src/images/arrow_right.svg"
+   },
+   {
+      "location": "Los Angeles",
+      "state": ", CA",
+      "image": "src/images/arrow_right.svg"
+   },
+   {
+      "location": "San Diego",
+      "state": ", CA",
+      "image": "src/images/arrow_right.svg"
+   },
+   {
+      "location": "New York",
+      "state": ", NY",
+      "image": "src/images/arrow_right.svg"
+   },
+   {
+      "location": "Las Vegas",
+      "state": ", NV",
+      "image": "src/images/arrow_right.svg"
+   },
+   {
+      "location": "Miami",
+      "state": ", FL",
+      "image": "src/images/arrow_right.svg"
+   }
+]

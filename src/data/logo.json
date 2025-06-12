@@ -1,0 +1,22 @@
+[
+   {
+      "image" : "src/images/logo01.svg",
+      "imageAltText" : "logo 01"
+   },
+   {
+      "image" : "src/images/logo02.svg",
+      "imageAltText" : "logo 02"
+   },
+   {
+      "image" : "src/images/logo03.svg",
+      "imageAltText" : "logo 03"
+   },
+   {
+      "image" : "src/images/logo04.svg",
+      "imageAltText" : "logo 04"
+   },
+   {
+      "image" : "src/images/logo05.svg",
+      "imageAltText" : "logo 05"
+   }
+]

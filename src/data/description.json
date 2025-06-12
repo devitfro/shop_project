@@ -1,0 +1,20 @@
+[
+   {
+      "image" : "src/images/house_logo.svg",
+      "imageAltText" : "House logo",
+      "title" : "Find property",
+      "text" : "Odales mauris quis tellus facilisis, vel mattis magna interdum. Curabitur eget aliquam elit. In mauris purus, auctor a eleifend non."
+   },
+   {
+      "image" : "src/images/deal_logo.svg",
+      "imageAltText" : "Deal logo",
+      "title" : "Make a deal",
+      "text" : "Pellentesque suscipit mauris. Nam dictum, erat a volutpat varius, urna nisi sollicitudin orci, sagittis facilisis odio tortor ac mi."
+   },
+   {
+      "image" : "src/images/key_logo.svg",
+      "imageAltText" : "Key logo",
+      "title" : "Get your keys",
+      "text" : "Nulla vel bibendum purus. Etiam tempus quam vel pulvinar rutrum. Duis semper, metus vitae fermentum consequat."
+   }
+]

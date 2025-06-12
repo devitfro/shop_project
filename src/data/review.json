@@ -1,0 +1,29 @@
+[
+   {
+      "name": "Michael Webb",
+      "position": "Customer",
+      "userImage" : "src/images/user01.svg",
+      "userImageAltText" : "User 1 photo",
+      "icon": "src/images/stars.svg",
+      "iconAltText" : "Stars icon",
+      "reviewText" : "Aliquam erat volutpat. Nulla pretium nec urna et convallis. Ut varius mi lacus, nec molestie libero ultricies nec. Aenean lacinia dui elit, ut gravida quam."
+   },
+   {
+      "name": "Amber Keene",
+      "position": "Customer",
+      "userImage" : "src/images/user02.svg",
+      "userImageAltText" : "User 2 photo",
+      "icon": "src/images/stars.svg",
+      "iconAltText" : "Stars icon",
+      "reviewText" : "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi pretium iaculis ultricies. Aenean in leo vitae tortor."
+   },
+   {
+      "name": "Sarah Tarleton",
+      "position": "Customer",
+      "userImage" : "src/images/user03.svg",
+      "userImageAltText" : "User 3 photo",
+      "icon": "src/images/stars.svg",
+      "iconAltText" : "Stars icon",
+      "reviewText" : "Condimentum viverra orci. Pellentesque suscipit odio nisl, non ultricies purus mattis eget. In placerat, lorem a sodales ullamcorper, eros nibh laoreet nisl."
+   }
+]

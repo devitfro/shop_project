@@ -1,0 +1,22 @@
+[
+   {
+      "url" : "#",
+      "image" : "src/images/fb.svg",
+      "imageAltText" : "Facebook logo"
+   },
+   {
+      "url" : "#",
+      "image" : "src/images/inst.svg",
+      "imageAltText" : "Instagram logo"
+   },
+   {
+      "url" : "#",
+      "image" : "src/images/tw.svg",
+      "imageAltText" : "Twitter logo"
+   },
+   {
+      "url" : "#",
+      "image" : "src/images/ln.svg",
+      "imageAltText" : "LinkedIn logo"
+   }
+]
